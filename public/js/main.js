@@ -19,7 +19,13 @@ content.addEventListener('click', (e) =>{
     }
 });
 
-
 // ### 2. 
 // - Créer une variable contenant le texte suivant : "Il est possible de passer des parametres dans la function utilisé dans l'écouteur d'événement et nous verrons ça dans le prochain exercice !"
 // - Rajoute au hover de la section le texte contenu dans la variable dans son paragraphe 
+let texte = "Il est possible de passer des parametres dans la function utilisé dans l'écouteur d'événement et nous verrons ça dans le prochain exercice !";
+let section = document.querySelector('section');
+section.style.width = '200px';
+section.style.height = '200px';
+section.addEventListener('mouseover', ()=>{
+    document.querySelector('section p').innerText = texte;
+});
