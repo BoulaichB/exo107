@@ -5,6 +5,19 @@
 // - Mettre le paragraphe en gras et en rouge
 // - Surligné le h1
 // - Effacer le h2, a chaque fois que l'on clique dessus il perd une lettre.
+let content = document.getElementById('content');
+content.addEventListener('click', (e) =>{
+    if(e.target.localName == "div"){
+        e.target.style.border = '1px solid blue';
+    } else if(e.target.localName == 'h1'){
+        e.target.style.backgroundColor = 'pink';
+    } else if(e.target.localName == 'p'){
+        e.target.style.color = 'red';
+        e.target.style.fontWeight = 'bolder';
+    } else if(e.target.localName == 'h2'){
+        e.target.innerText = e.target.innerText.substring(0, e.target.innerText.length - 1);
+    }
+});
 
 
 // ### 2. 
